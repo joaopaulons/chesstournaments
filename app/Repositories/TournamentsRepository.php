@@ -20,7 +20,7 @@ class TournamentsRepository implements TournamentsInterface
     public function index()
     {
         try {
-            return view('home.index')->with('results', Tournaments::where('confirmed', true)->all());
+            return view('home.index')->with('results', Tournaments::where('confirmed', 1)->get());
         } catch (QueryException $e) {
             return $this->error('error', $e->getMessage());
         }
