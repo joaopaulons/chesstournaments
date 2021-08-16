@@ -18,7 +18,7 @@
                         "</br> <b>Organizador:</b> {{ $data->host_name }}" +
                         `</br> <b>Descricao:</b> {{ $data->description }}`,
                     date: "{{ $formatDate->formatDate($data->event_start_date) }}", // Event date (required)
-                    color: @if(date("Y-m-d") > $data->event_end_date) "#63d867" @else "#FF0000" @endif, // Event custom color (optional)
+                    color: @if(strtotime(date("Y-m-d")) > strtotime($data->event_end_date)) "#63d867" @else "#FF0000" @endif, // Event custom color (optional)
                 },
                 @endforeach
             ]
