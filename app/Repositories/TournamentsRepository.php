@@ -15,12 +15,12 @@ class TournamentsRepository implements TournamentsInterface
     /**
      * Return all the tournaments from database
      *
-     * @return \Illuminate\Http\JsonResponse
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\JsonResponse|\Illuminate\View\View
      */
     public function index()
     {
         try {
-            return $this->success('success', Tournaments::all());
+            return view('home.index')->with('results', Tournaments::where('confirmed', true)->all());
         } catch (QueryException $e) {
             return $this->error('error', $e->getMessage());
         }
