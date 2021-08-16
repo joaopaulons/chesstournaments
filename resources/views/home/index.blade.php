@@ -25,11 +25,7 @@
                         <div id="calendar" class="calendar"></div>
                     </div>
                     <div class="col-md-12">
-                        <h2><p>Quer ajudar a contribuir colocando datas de campeonatos de sua Cidade/Região ou Estado?
-                                Ou
-                                até campeonatos que você esta organizando? Cadastre-se e preencha as informações do
-                                campeonato,
-                                que iremos colocar para aprovação, respostas em ate 24hrs!</p></h2>
+                        <h2><p>Ajude-nos cadastrando torneios do seu estado, após o cadastro será enviado para a aprovação!</p></h2>
                     </div>
                 </div>
             </div>

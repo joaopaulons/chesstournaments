@@ -50,7 +50,7 @@
                                                                class="img-fluid"></a>
 
         @guest
-            <div class="container d-flex align-items-center justify-content-lg-end">
+           <!-- <div class="container d-flex align-items-center justify-content-lg-end">
                 <div class="btn-group btn-group-lg">
                     <div class="col-lg-7 col-sm-6">
                         <a href="{{ route('login') }}" class="get-started-btn scrollto">Login</a>
@@ -67,7 +67,7 @@
                     <button type="submit" class="get-started-btn scrollto">Logout</button>
                 </form>
 
-            </div>
+            </div>-->
         @endguest
     </div>
 </header>
@@ -86,6 +86,8 @@
                     <div class="footer-info">
                         <h3>Camp.Chess<span>.</span></h3>
                         <div class="social-links mt-3">
+                            <a href="https://github.com/joaopaulons/chesstournaments.git" class="github" target="_blank"><i
+                                    class="bx bxl-github"></i></a>
                             <!--<a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
                             <a href="https://www.instagram.com/insta_puzzle_games/" class="instagram" target="_blank"><i
                                     class="bx bxl-instagram"></i></a>
@@ -98,7 +100,7 @@
                 </div>
 
 
-                <div class="col-lg-4 col-md-6 footer-newsletter">
+                <!--<div class="col-lg-4 col-md-6 footer-newsletter">
                     <h4>Nossa Newsletter</h4>
                     <p>Inscreva seu e-mail aqui para não perder nenhum campeonato!</p>
                     <form action="{{ route('newsletter') }}" method="post">
@@ -106,7 +108,7 @@
                         <input type="email" required name="email"><input type="submit" value="Subscribe">
                     </form>
 
-                </div>
+                </div>-->
 
             </div>
         </div>
@@ -114,7 +116,7 @@
 
     <div class="container">
         <div class="copyright">
-            &copy; Copyright <strong><span>Camp.Chess</span></strong>. All Rights Reserved
+            &copy; Copyright <strong><span>Sistema desenvolvido por Joao Santos</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
             <!-- All the links in the footer should remain intact. -->
