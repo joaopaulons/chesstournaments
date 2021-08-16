@@ -72,7 +72,7 @@
     </div>
 </header>
 
-@yield('sections')
+@yield('content')
 
 
 @yield('modals')

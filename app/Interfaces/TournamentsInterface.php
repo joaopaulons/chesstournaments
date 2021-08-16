@@ -1,30 +1,46 @@
 <?php
 
-namespace App\Interfaces\Lichess;
+namespace App\Interfaces;
 
-use App\Http\Requests\Lichess\AccountInfoRequest;
+use App\Http\Requests\TournamentsRequest;
 
 interface TournamentsInterface
 {
     /**
-     * Get all informations about user on lichess
-     * @access  public
+     * Get all the registered tournaments
      *
+     * @access  public
      */
-    public function getProfile();
+    public function index();
 
     /**
-     * Get email from user registered on lichess
-     * @access  public
+     * Add a new tournament
      *
+     * @access  public
+     * @param TournamentsRequest $request
      */
-    public function getEmailAddress();
+    public function store(TournamentsRequest $request);
 
     /**
-     * Get preferences from user
+     * Get one tournament
      * @access  public
-     *
+     * @param String $id
      */
-    public function getPreferences();
+    public function show($id);
+
+
+    /**
+     * @param $id
+     * @param TournamentsRequest $request
+     * @return mixed
+     */
+    public function update($id, TournamentsRequest $request);
+
+    /**
+     * Stop showing a tournament
+     * @param String $id
+     * @return mixed
+     */
+    public function destroy($id);
 
 }
