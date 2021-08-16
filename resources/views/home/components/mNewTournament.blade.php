@@ -66,7 +66,7 @@
 
                         <div class="col-md-6 form-group mt-4 mt-md-0 pb-3">
                             <label class="text-white">Data final:</label>
-                            <input class="form-control" type="date" name="event_end_date" id="event_end_date" required>
+                            <input class="form-control" type="date" min="{{date('Y-m-d')}}" name="event_end_date" id="event_end_date" required>
                         </div>
 
                         <div class="col-md-6 form-group mt-4 mt-md-0 pb-3">
