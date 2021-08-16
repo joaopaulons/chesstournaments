@@ -11,6 +11,7 @@
             var description = document.getElementById('description').value;
             var link_more_information = document.getElementById('link_more_information').value;
 
+            $('#add-camp-confirm').prop('disbled', true);
             $.ajax({
                 data: {
                     _token: token,
@@ -26,17 +27,18 @@
                 method: 'post',
                 url: "{{ route('tournament.store') }}",
                 success: function (response) {
-                    if (response.status === 200) {
+                    if (response.code === 200) {
                         Swal.fire({
                             icon: 'success',
-                            title: `O campeonato ${response.name} foi adicionado no dia ${response.event_start_date}! Agradecemos a sua colaboracao!`,
+                            title: `O campeonato ${response.results.name} foi adicionado no dia ${response.results.event_start_date}! Agradecemos a sua colaboração!`,
                             showConfirmButton: true,
                             confirmButtonText: `Ok :)`,
                         }).then((result) => {
                             location.reload();
+                            $('#add-camp-confirm').prop('disbled', false);
                         })
 
-                    } else if (response.status === 400) {
+                    } else {
                         Swal.fire({
                             position: 'top-end',
                             icon: 'error',
