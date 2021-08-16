@@ -1,11 +1,10 @@
 <script type="text/javascript">
     $(document).ready(function(event){
         $.ajax({
-            method: 'get',
+            method: 'GET',
             url: "{{ route('tournament.index') }}",
-
             success: function (response) {
-                console.log(response);
+                console.log(response.results);
             }
         });
         @if(isset($calendarDates))

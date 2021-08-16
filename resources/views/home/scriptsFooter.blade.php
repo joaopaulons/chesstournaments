@@ -1,3 +1,4 @@
+@include('home.components.calendar')
 @include('home.components.reqsAjax')
 @include('home.components.mNewTournament')
 <script type="text/javascript">
