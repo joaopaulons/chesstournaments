@@ -23,8 +23,11 @@ Para instalar este repositorio em seu computador siga os comandos abaixo 👇
 To install this repository on your computer, follow the commands below 👇
 
 ```bash
+#clone repo into your computer
 $ git clone https://github.com/joaopaulons/chesstournaments.git
+#go to folder
 $ cd chesstournaments
+#install dependecies
 $ composer install
 ```
 
@@ -33,6 +36,8 @@ Agora renomeie o arquivo .env.example para .env e troque as informações do ban
 Now rename the .env.example file to .env and change the database information to your database.
 
 ```bash
+#username from your connection database
 DB_USERNAME=root
+#password from your connection database
 DB_PASSWORD=root
 ```
