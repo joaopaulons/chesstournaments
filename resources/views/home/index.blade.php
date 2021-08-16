@@ -40,8 +40,6 @@
         </div>
 
     </section>
-
-    <div id="preloader" class="hidden"></div>
 @endsection
 
 @include('home.components.mNewTournament')
