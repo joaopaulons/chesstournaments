@@ -16,9 +16,9 @@
                         "</br> <b>Ritmo:</b>  {{ $data->rhythm }}" +
                         "</br> <b>Período:</b> {{ implode('/', array_reverse(explode('-', $data->event_start_date))) }} a {{ implode('/', array_reverse(explode('-', $data->event_end_date))) }}" +
                         "</br> <b>Organizador:</b> {{ $data->host_name }}" +
-                        `</br> <b>Descricao:</b> {{ $data->description }}`,
+                        `</br> <b>Descricao:</b> {{ $data->descriptison }}`,
                     date: "{{ $formatDate->formatDate($data->event_start_date) }}", // Event date (required)
-                    color: @if(strtotime(date("Y-m-d")) > strtotime($data->event_end_date)) "#63d867" @else "#FF0000" @endif, // Event custom color (optional)
+                    color: "#63d867", // Event custom color (optional)
                 },
                 @endforeach
             ]
