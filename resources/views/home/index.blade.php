@@ -17,14 +17,10 @@
             <br/>
             <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
                 <div class="row">
-
-                    @guest
-                    @else
-                        <div class="col-md-12 d-flex align-items-center justify-content-lg-center pb-4">
-                            <button type="button" id="btn-add-comp" class="btn btn-primary">Adicionar competicao
-                            </button>
-                        </div>
-                    @endif
+                    <div class="col-md-12 d-flex align-items-center justify-content-lg-center pb-4">
+                        <button type="button" id="btn-add-comp" class="btn btn-primary">Adicionar competicao
+                        </button>
+                    </div>
                     <div class="col-md-12">
                         <div id="calendar" class="calendar"></div>
                     </div>

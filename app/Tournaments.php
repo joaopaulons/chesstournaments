@@ -20,9 +20,10 @@ class Tournaments extends Model
      * /description/ of the tournament
      * /confirmed/ boolean, just to confirm and show this tournament
      * /links/ of tournament
+     * /status/ whether tournament is active, in progress, finished, waiting aprovement
      */
     protected $fillable = [
-        'name','state', 'city', 'rhythm', 'event_start_date', 'event_end_date', 'host_name', 'description', 'confirmed', 'links'
+        'name','state', 'city', 'rhythm', 'event_start_date', 'event_end_date', 'host_name', 'description', 'confirmed', 'link_more_information', 'status'
     ];
 
     protected $table = 'tournaments';

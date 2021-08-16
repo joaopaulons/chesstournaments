@@ -80,6 +80,12 @@
                             <textarea type="text" class="form-control" maxlength="255" name="description"
                                       id="description" required></textarea>
                         </div>
+
+                        <div class="col-md-12 form-group mt-4 mt-md-0 pb-3">
+                            <label class="text-white">Link para mais informações: </label>
+                            <textarea type="text" class="form-control" maxlength="255" name="link_more_information"
+                                      id="link_more_information" required></textarea>
+                        </div>
                     </div>
 
                     <div class="row">

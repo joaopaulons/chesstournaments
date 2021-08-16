@@ -238,7 +238,7 @@
                                             </button>
 
 
-                                                <a class="btn btn-link" href="{{ route('tournaments.index') }}">
+                                                <a class="btn btn-link" href="{{ route('tournament.index') }}">
                                                     Página incial
                                                 </a>
                                         </div>

@@ -31,6 +31,7 @@ class TournamentsRequest extends FormRequest
             'event_end_date' => 'required', 'date',
             'host_name' => 'required', 'max:255', 'string',
             'description' => 'required', 'max:255', 'string',
+            'link_more_information' => 'required','string'
         ];
     }
 }

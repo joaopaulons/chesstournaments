@@ -20,7 +20,7 @@ class TournamentsRepository implements TournamentsInterface
     public function index()
     {
         try {
-            return view('home.index')->with('results', Tournaments::where('confirmed', 1)->get());
+            return view('home.index')->with('results', Tournaments::where('confirmed', 1)->where('status', 'active')->get());
         } catch (QueryException $e) {
             return $this->error('error', $e->getMessage());
         }
@@ -47,9 +47,9 @@ class TournamentsRepository implements TournamentsInterface
      */
     public function show($id)
     {
-        try{
+        try {
             return $this->success('success', Tournaments::where('id', $id)->first());
-        }catch(QueryException $e){
+        } catch (QueryException $e) {
             return $this->error('error', $e->getMessage());
         }
 
@@ -63,9 +63,9 @@ class TournamentsRepository implements TournamentsInterface
      */
     public function update($id, TournamentsRequest $request)
     {
-        try{
+        try {
             return $this->success('success', Tournaments::where('id', $id)->update($request->all()));
-        }catch(QueryException $e){
+        } catch (QueryException $e) {
             return $this->error('error', $e->getMessage());
         }
     }
@@ -77,9 +77,9 @@ class TournamentsRepository implements TournamentsInterface
      */
     public function destroy($id)
     {
-        try{
+        try {
             return $this->success('success', Tournaments::where('id', $id)->update('status', 'disabled'));
-        }catch(QueryException $e){
+        } catch (QueryException $e) {
             return $this->error('error', $e->getMessage());
         }
     }

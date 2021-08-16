@@ -9,6 +9,7 @@
             var event_end_date = document.getElementById('event_end_date').value;
             var host_name = document.getElementById('host_name').value;
             var description = document.getElementById('description').value;
+            var link_more_information = document.getElementById('link_more_information').value;
 
             $.ajax({
                 data: {
@@ -19,7 +20,8 @@
                     event_start_date: event_start_date,
                     event_end_date: event_end_date,
                     host_name: host_name,
-                    description: description
+                    description: description,
+                    link_more_information: link_more_information
                 },
                 method: 'post',
                 url: "{{ route('tournament.store') }}",

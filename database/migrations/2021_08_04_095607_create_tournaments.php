@@ -23,6 +23,8 @@ class CreateTournaments extends Migration
             $table->string('host_name');
             $table->string('description');
             $table->boolean('confirmed')->default(false);
+            $table->string('link_more_information')->nullable();
+            $table->enum('status', ['active', 'in progress', 'finished', 'waiting aprovement'])->default('waiting aprovement');
             $table->timestamps();
         });
     }
