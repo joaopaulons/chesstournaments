@@ -1,5 +1,4 @@
 @include('home.components.reqsAjax')
-@include('home.components.responses')
 @include('home.components.mNewTournament')
 <script type="text/javascript">
 

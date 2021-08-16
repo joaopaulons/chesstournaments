@@ -22,7 +22,7 @@
                     description: description
                 },
                 method: 'post',
-                url: "{{ route('tournaments.store') }}",
+                url: "{{ route('tournament.store') }}",
                 success: function (response) {
                     if (response.status === 200) {
                         Swal.fire({

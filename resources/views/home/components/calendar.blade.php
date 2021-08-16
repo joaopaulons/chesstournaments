@@ -2,7 +2,7 @@
     $(document).ready(function(event){
         $.ajax({
             method: 'get',
-            url: "{{ route('tournaments.index') }}",
+            url: "{{ route('tournament.index') }}",
             beforeSend: function(){
                 $('#preloader').removeClass('hidden');
             },
