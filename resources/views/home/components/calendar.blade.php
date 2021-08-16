@@ -1,6 +1,6 @@
 <script type="text/javascript">
     $(document).ready(function (event) {
-        @if(isset($calendarDates))
+        @if(isset($results))
         $("#calendar").evoCalendar({
             theme: "Orange Coral",
             language: 'pt',

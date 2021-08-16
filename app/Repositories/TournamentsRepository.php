@@ -19,6 +19,7 @@ class TournamentsRepository implements TournamentsInterface
      */
     public function index()
     {
+        dd(Tournaments::where('confirmed', 1)->get());
         try {
             return view('home.index')->with('results', Tournaments::where('confirmed', 1)->get());
         } catch (QueryException $e) {
