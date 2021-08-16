@@ -1,8 +1,6 @@
 <?php
 
-Route::get('/', function(){
-    return view('home.index');
-});
+Route::get('/', 'TournamentsController@index');
 
 Route::post('/subscribe/newsletter', 'NewsletterController@store')->name('newsletter');
 
