@@ -1,4 +1,4 @@
-@inject('formatDate', "App\Traits\DateNumberToMonth")
+@inject('formatDate', "App\Tournaments")
 <script type="text/javascript">
     $(document).ready(function (event) {
         @if(isset($results))

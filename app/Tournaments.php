@@ -26,4 +26,13 @@ class Tournaments extends Model
     ];
 
     protected $table = 'tournaments';
+
+    public function formatDate($date){
+        $date = explode('-', $date);
+
+        $dateObj   = \DateTime::createFromFormat('!m', $date[1]);
+        $monthName = $dateObj->format('F'); // March
+
+        echo $monthName . '/'.$date[2].'/'.$date[0];
+    }
 }
