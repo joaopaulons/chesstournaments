@@ -49,7 +49,6 @@
         <a href="{{ url('/') }}" class="logo me-auto me-lg-0"><img src="{{ asset('assets/img/logo.png') }}" alt=""
                                                                class="img-fluid"></a>
 
-        @guest
            <!-- <div class="container d-flex align-items-center justify-content-lg-end">
                 <div class="btn-group btn-group-lg">
                     <div class="col-lg-7 col-sm-6">
@@ -60,15 +59,14 @@
                     </div>
                 </div>
             </div>
-        @else
+
             <div class="container d-flex align-items-center justify-content-lg-end">
                 <form method="post" action="{{ route('logout') }}">
-                    @csrf
+
                     <button type="submit" class="get-started-btn scrollto">Logout</button>
                 </form>
 
             </div>-->
-        @endguest
     </div>
 </header>
 
