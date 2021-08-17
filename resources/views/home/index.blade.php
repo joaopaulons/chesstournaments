@@ -35,6 +35,5 @@
 @endsection
 
 @section('scripts-footer')
-    @include('home.components.mNewTournament')
     @include('home.scriptsFooter')
 @endsection
