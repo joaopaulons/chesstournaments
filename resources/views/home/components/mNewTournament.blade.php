@@ -60,7 +60,7 @@
 
                         <div class="col-md-6 form-group mt-3 mt-md-0 pb-3">
                             <label class="text-white">Data de inicio:</label>
-                            <input class="form-control" type="date" name="event_start_date" id="event_start_date"
+                            <input class="form-control" type="date" min="{{date('Y-m-d')}}" name="event_start_date" id="event_start_date"
                                    required>
                         </div>
 
