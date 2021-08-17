@@ -4,7 +4,7 @@
         Swal.fire({
             title: 'Sucesso!',
             text: 'Você foi Registrado(a) com sucesso! Esta é 7ª imagem da sequência correta!',
-            imageUrl: '{{ asset('assets/img/mosaicos/up.gif') }}',
+            imageUrl: '{{ asset('assets/img/mosaicos/up.gif', true) }}',
             imageWidth: 500,
             imageHeight: 500,
             imageAlt: 'Dica do desafio',

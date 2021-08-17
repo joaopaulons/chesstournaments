@@ -2,10 +2,10 @@
      aria-hidden="true">
     <div class="modal-dialog modal-lg">
 
-        <div class="modal-content" style="background-image: url('{{ URL::asset('assets/img/fundo-modal-body.png') }}')">
+        <div class="modal-content" style="background-image: url('{{ asset('assets/img/fundo-modal-body.png', true) }}')">
             <div class="modal-header">
                 <img class="image d-flex align-items-center justify-content-center" style="border-radius: 10px"
-                     src="{{ URL::asset('assets/img/banner-modal-top.png') }}" width="100%" height="100%">
+                     src="{{ asset('assets/img/banner-modal-top.png', true) }}" width="100%" height="100%">
             </div>
             <div class="modal-body">
                 <form id="adicionar-campeonato">
@@ -98,7 +98,7 @@
             <div class="modal-footer">
                 <div class="col-12">
                 <!--<img class="image d-flex align-items-center justify-content-center" style="border-radius: 10px"
-                         width="100%" height="100%" src="{{ URL::asset('assets/img/campeonatos-baner.png') }}">-->
+                         width="100%" height="100%" src="{{ asset('assets/img/campeonatos-baner.png', true) }}">-->
                 </div>
             </div>
         </div>

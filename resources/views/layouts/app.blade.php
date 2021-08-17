@@ -11,8 +11,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Favicons -->
-    <link href="{{ URL::asset('assets/img/favicon.png') }}" rel="icon">
-    <link href="{{ URL::asset('assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+    <link href="{{ asset('assets/img/favicon.png') }}" rel="icon">
+    <link href="{{ asset('assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link
@@ -20,22 +20,22 @@
         rel="stylesheet">
 
     <!-- Vendor CSS Files -->
-    <link href="{{ URL::asset('assets/vendor/aos/aos.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('assets/vendor/remixicon/remixicon.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('css/calendar.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/aos/aos.css', true) }}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css', true) }}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css', true) }}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/boxicons/css/boxicons.min.css', true) }}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/glightbox/css/glightbox.min.css', true) }}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/remixicon/remixicon.css', true) }}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/swiper/swiper-bundle.min.css', true) }}" rel="stylesheet">
+    <link href="{{ asset('css/calendar.css', true) }}" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="{{ URL::asset('js/calendar.js') }}"></script>
+    <script src="{{ asset('js/calendar.js', true) }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     @yield('scripts-head')
     <!-- Template Main CSS File -->
-    <link href="{{ URL::asset('assets/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/style.css', true) }}" rel="stylesheet">
 </head>
 
 <body>
@@ -46,7 +46,7 @@
 
         <!-- <h1 class="logo me-auto me-lg-0"><a href="index.html">INSTA PUZZLE<span>.</span></a></h1> -->
         <!-- Uncomment below if you prefer to use an image logo -->
-        <a href="{{ url('/') }}" class="logo me-auto me-lg-0"><img src="{{ URL::asset('assets/img/logo.png') }}" alt=""
+        <a href="{{ url('/') }}" class="logo me-auto me-lg-0"><img src="{{ asset('assets/img/logo.png', true) }}" alt=""
                                                                class="img-fluid"></a>
 
            <!-- <div class="container d-flex align-items-center justify-content-lg-end">
@@ -131,16 +131,16 @@
         class="bi bi-arrow-up-short"></i></a>
 
 <!-- Vendor JS Files -->
-<script src="{{ URL::asset('assets/vendor/aos/aos.js') }}"></script>
-<script src="{{ URL::asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-<script src="{{ URL::asset('assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
-<script src="{{ URL::asset('assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
-<script src="{{ URL::asset('assets/vendor/php-email-form/validate.js') }}"></script>
-<script src="{{ URL::asset('assets/vendor/purecounter/purecounter.js') }}"></script>
-<script src="{{ URL::asset('assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
+<script src="{{ asset('assets/vendor/aos/aos.js', true) }}"></script>
+<script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js', true) }}"></script>
+<script src="{{ asset('assets/vendor/glightbox/js/glightbox.min.js', true) }}"></script>
+<script src="{{ asset('assets/vendor/isotope-layout/isotope.pkgd.min.js', true) }}"></script>
+<script src="{{ asset('assets/vendor/php-email-form/validate.js', true) }}"></script>
+<script src="{{ asset('assets/vendor/purecounter/purecounter.js', true) }}"></script>
+<script src="{{ asset('assets/vendor/swiper/swiper-bundle.min.js', true) }}"></script>
 <!-- Template Main JS File -->
-<script src="{{ URL::asset('assets/js/main.js') }}"></script>
-<script src="{{ URL::asset('js/sweetalert2.all.min.js') }}"></script>
+<script src="{{ asset('assets/js/main.js', true) }}"></script>
+<script src="{{ asset('js/sweetalert2.all.min.js', true) }}"></script>
 @yield('scripts-footer')
 
 </body>
