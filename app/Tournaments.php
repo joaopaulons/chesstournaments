@@ -9,36 +9,26 @@ class Tournaments extends Model
 {
     use Uuids;
 
+    /**
+     * /name/ of Tournament
+     * /state/ where will the tournament be
+     * /city/ of Tournament
+     * /rhythm/ of the tournament, can be: Classic, Blitz, Rapid
+     * /event_start_date/ When will the tournament start
+     * /event_end_date/ When will the tournament end
+     * /host_name/ The tournament organizer
+     * /description/ of the tournament
+     * /confirmed/ boolean, just to confirm and show this tournament
+     * /links/ of tournament
+     * /status/ whether tournament is active, in progress, finished, waiting aprovement
+     */
     protected $fillable = [
-        'name','state', 'city', 'rhythm', 'event_start_date', 'event_end_date', 'host_name', 'description', 'confirmed'
+        'name','state', 'city', 'rhythm', 'event_start_date', 'event_end_date', 'host_name', 'description', 'confirmed', 'link_more_information', 'status'
     ];
 
     protected $table = 'tournaments';
 
-    public function allData(){
-        return parent::all()->where('confirmed', true);
-    }
-
-    public function newData(array $data = []){
-
-        return parent::create($data);
-    }
-
-    public function updateData(array $data = [], $id){
-
-        return parent::where('id', $id)->update($data);
-    }
-
-    public function showData($id){
-
-        return parent::find($id);
-    }
-
-    public function deleteProducts($id){
-        return parent::where('id', $id)->delete();
-    }
-
-   public function DateNumberToMonth($date){
+    public function formatDate($date){
         $date = explode('-', $date);
 
         $dateObj   = \DateTime::createFromFormat('!m', $date[1]);

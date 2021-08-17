@@ -1,38 +1,50 @@
 <?php
+namespace App\Traits;
 
+use Illuminate\Http\JsonResponse;
 
-use Illuminate\Support\Str;
+trait Responses {
 
-trait ResponseMessages
-{
-    /**
-     * Boot function from Laravel.
-     */
-    protected static function boot()
-    {
-        parent::boot();
-        static::creating(function ($model) {
-            if (empty($model->{$model->getKeyName()})) {
-                $model->{$model->getKeyName()} = Str::uuid()->toString();
-            }
-        });
+    public function coreResponse($message, $data = null, $statusCode, $isSuccess = true) {
+        if(!$message) return response()->json(['message' => 'Insira uma mensagem!'], 500);
+
+        if($isSuccess) {
+            return response()->json([
+                'message' => $message,
+                'error' => false,
+                'code' => $statusCode,
+                'results' => $data
+            ], $statusCode);
+        }  else {
+            return response()->json([
+                'message' => $message,
+                'error' => true,
+                'code' => $statusCode,
+            ], $statusCode);
+        }
     }
+
     /**
-     * Get the value indicating whether the IDs are incrementing.
+     * Send any success response
      *
-     * @return bool
+     * @param   string          $message
+     * @param   integer         $statusCode
      */
-    public function getIncrementing()
+
+    public function success($message, $data, $statusCode = JsonResponse::HTTP_OK)
     {
-        return false;
+        return $this->coreResponse($message, $data, $statusCode);
     }
+
     /**
-     * Get the auto-incrementing key type.
+     * Send any error response
      *
-     * @return string
+     * @param   string          $message
+     * @param   integer         $statusCode
      */
-    public function getKeyType()
+
+    public function error($message, $statusCode = JsonResponse::HTTP_INTERNAL_SERVER_ERROR)
     {
-        return 'string';
+        return $this->coreResponse($message, null, $statusCode, false);
     }
 }
