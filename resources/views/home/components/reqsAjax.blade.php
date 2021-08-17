@@ -25,7 +25,7 @@
                     link_more_information: link_more_information
                 },
                 method: 'post',
-                url: "{{ route('tournament.store') }}",
+                url: "{{ route('tournament.store', true) }}",
                 success: function (response) {
                     if (response.code === 200) {
                         Swal.fire({
